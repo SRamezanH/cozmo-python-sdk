@@ -178,7 +178,7 @@ def add_img_box_to_image(image, box, color, text=None):
     x2, y2 = box.right_x, box.bottom_y
     d.rectangle([x1, y1, x2, y2], outline=color)
     if text is not None:
-        if isinstance(text, collections.Iterable):
+        if isinstance(text, collections.abc.Iterable):
             for t in text:
                 t.render(d, (x1, y1, x2, y2))
         else:
